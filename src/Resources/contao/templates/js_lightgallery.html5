@@ -1,0 +1,19 @@
+<?php
+
+// Add the baguettebox style sheet
+$GLOBALS['TL_CSS'][] = 'bundles/clickpresslightgallery/lightgallery.js/dist/css/lightgallery.css|static';
+
+?>
+
+<script src="bundles/clickpresslightgallery/lightgallery.js/js/lightgallery.min.js"></script>
+
+<script>
+    var gallery = document.querySelectorAll('.ce_gallery');
+
+    gallery.forEach(function(element, index, array) {
+      lightGallery(element, {
+        download: false,
+        thumbnail: true
+      });
+    });
+</script>

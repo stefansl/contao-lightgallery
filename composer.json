@@ -1,0 +1,42 @@
+{
+  "name":"stefansl/lightgallery-bundle",
+  "description":"Lightgallery for Contao",
+  "keywords":["contao","lightbox", "vanillajs"],
+  "type":"contao-bundle",
+  "homepage":"https://clickpress.de",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"CLICKPRESS",
+      "homepage":"https://clickpress.de",
+      "role":"Developer"
+    }
+  ],
+  "require":{
+    "php":">=7.0",
+    "contao/core-bundle":"^4.4"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "extra":{
+    "contao-manager-plugin": "Clickpress\\LightgalleryBundle\\ContaoManager\\Plugin"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/core-bundle": "4.4.1",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload":{
+    "psr-4": {
+      "Clickpress\\LightgalleryBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/config/",
+      "src/Resources/contao/templates/"
+    ]
+  }
+}
