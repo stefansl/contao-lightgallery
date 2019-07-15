@@ -8,12 +8,23 @@ $GLOBALS['TL_CSS'][] = 'bundles/clickpresslightgallery/lightgallery.js/dist/css/
 <script src="bundles/clickpresslightgallery/lightgallery.js/js/lightgallery.min.js"></script>
 
 <script>
-    var gallery = document.querySelectorAll('.ce_gallery');
+window.addEventListener('load', function() {
+  var gallery = document.querySelectorAll('.ce_gallery'),
+      image = document.querySelectorAll('.ce_image')
 
-    gallery.forEach(function(element, index, array) {
-      lightGallery(element, {
+  gallery.forEach(function(element, index, array) {
+    lightGallery(element, {
+      download: false,
+      thumbnail: true,
+      selector: 'a'
+    })
+  })
+    image.forEach(function(element, index, array) {
+      lightGallery(element,{
         download: false,
-        thumbnail: true
-      });
-    });
+        thumbnail: false,
+        selector: 'a'
+      })
+    })
+})
 </script>
