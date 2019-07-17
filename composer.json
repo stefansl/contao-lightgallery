@@ -1,5 +1,5 @@
 {
-  "name":"stefansl/lightgallery-bundle",
+  "name":"stefansl/contao-lightgallery",
   "description":"Lightgallery for Contao",
   "keywords":["contao","lightbox", "vanillajs"],
   "type":"contao-bundle",
