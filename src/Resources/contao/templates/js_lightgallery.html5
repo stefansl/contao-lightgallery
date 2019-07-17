@@ -1,12 +1,9 @@
 <?php
-
-// Add the baguettebox style sheet
+// Add the lightgallery style sheet
 $GLOBALS['TL_CSS'][] = 'bundles/clickpresslightgallery/lightgallery.js/css/lightgallery.css|static';
-
 ?>
 
 <script src="bundles/clickpresslightgallery/lightgallery.js/js/lightgallery.min.js"></script>
-
 <script>
 window.addEventListener('load', function() {
   var gallery = document.querySelectorAll('.ce_gallery'),
