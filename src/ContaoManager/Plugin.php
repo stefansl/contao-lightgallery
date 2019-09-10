@@ -22,7 +22,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(Clickpress\LightgalleryBundle\ClickpressLightgalleryBundle::class)
+            BundleConfig::create(\Clickpress\LightgalleryBundle\ClickpressLightgalleryBundle::class)
                 ->setLoadAfter([Contao\CoreBundle\ContaoCoreBundle::class]),
         ];
     }
