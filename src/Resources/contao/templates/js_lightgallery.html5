@@ -16,12 +16,12 @@ window.addEventListener('load', function() {
       selector: 'a'
     })
   })
-    image.forEach(function(element, index, array) {
-      lightGallery(element,{
-        download: false,
-        thumbnail: false,
-        selector: 'a'
-      })
+  image.forEach(function(element, index, array) {
+    lightGallery(element, {
+      download: false,
+      thumbnail: false,
+      selector: 'a'
     })
+  })
 })
 </script>
