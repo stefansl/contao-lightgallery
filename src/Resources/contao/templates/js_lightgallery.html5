@@ -1,13 +1,14 @@
 <?php
 // Add the lightgallery style sheet
-$GLOBALS['TL_CSS'][] = 'bundles/clickpresslightgallery/lightgallery.js/css/lightgallery.min.css|static';
+$GLOBALS['TL_CSS'][] = 'bundles/clickpresslightgallery/lightgallery.js/css/lightgallery.css|static';
 ?>
 
 <script src="bundles/clickpresslightgallery/lightgallery.js/js/lightgallery.min.js"></script>
 <script>
 window.addEventListener('load', function() {
   var gallery = document.querySelectorAll('.ce_gallery'),
-      image = document.querySelectorAll('.ce_image')
+      image = document.querySelectorAll('.ce_image'),
+      ceText = document.querySelectorAll('.ce_text .image_container');
 
   gallery.forEach(function(element, index, array) {
     lightGallery(element, {
@@ -16,8 +17,15 @@ window.addEventListener('load', function() {
       selector: 'a'
     })
   })
-  image.forEach(function(element, index, array) {
+  ceText.forEach(function(element, index, array) {
     lightGallery(element, {
+      download: false,
+      thumbnail: false,
+      selector: 'a'
+    })
+  })
+  image.forEach(function(element, index, array) {
+    lightGallery(element,{
       download: false,
       thumbnail: false,
       selector: 'a'
